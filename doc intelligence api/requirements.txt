@@ -6,3 +6,4 @@ qdrant-client
 groq
 google-genai
 python-dotenv
+pypdf

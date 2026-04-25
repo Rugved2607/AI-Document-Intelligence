@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-const API_URL = 'https://ai-document-intelligence-gqsg.onrender.com/'
+const API_URL = 'https://ai-document-intelligence-gqsg.onrender.com'
 
 export default function App() {
   const [docId, setDocId] = useState(null)

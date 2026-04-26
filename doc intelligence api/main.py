@@ -7,8 +7,7 @@ from rag import answer_question
 from pdf_processor import extract_text, split_into_chunks
 from vector_store import store_chunks
 from pypdf import PdfReader
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
-app.add_middleware(HTTPSRedirectMiddleware)
+
 
 from fastapi.middleware.cors import CORSMiddleware
 

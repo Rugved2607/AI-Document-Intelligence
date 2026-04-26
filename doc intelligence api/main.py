@@ -16,7 +16,7 @@ app = FastAPI(title="Document Intelligence API", version="1.0.0")
 # Add this right after creating app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://doc-intelligence-frontend.vercel.app"],
+    allow_origins=["https://doc-intelligence-frontend.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

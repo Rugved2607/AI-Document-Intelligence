@@ -48,10 +48,13 @@ def store_chunks(doc_id: str, chunks: list[str]):
 
 def retrieve_chunks(doc_id: str, query: str, n: int = 10) -> list[str]:
     ensure_collection(doc_id)
+
     query_embedding = get_embedding(query, is_query=True)
-    results = qdrant_client.search(
+
+    results = qdrant_client.query_points(
         collection_name=doc_id,
-        query_vector=query_embedding,
+        query=query_embedding,
         limit=n
     )
-    return [r.payload["text"] for r in results]
+
+    return [point.payload["text"] for point in results.points]
